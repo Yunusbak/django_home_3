@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Categories</title>
+</head>
+<body>
+    <h1>Animal Categories:</h1>
+    <ul>
+    {% for category in categories %}
+        <li><a href="{% url 'animal_list' category.id %}">{{ category.info }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

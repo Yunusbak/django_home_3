@@ -1,0 +1,9 @@
+<h1>telephone's:</h1>
+<br>
+<body>
+    <ol>
+        {% for category in categories %}
+            <li><h1><a href="{% url 'phone_list' category.id %}">{{ category.name }}</a></h1></li>
+        {% endfor %}
+    </ol>
+</body>

@@ -1,0 +1,22 @@
+<h1>{{ category.name }}</h1>
+
+<ul>
+{% for phone in phones %}
+    <li>
+        <img src="{{ phone.image.url }}"/><br>
+        Model: 
+        {{ phone.model }} <br>
+        Make company:
+        {{ phone.company }} <br>
+        price:
+        {{ phone.price }}</li>  <br>
+
+        <a href="{% url 'category_list'%}" >back</a><br>
+
+        <br>
+
+
+{% empty %}
+    <li>No phones available in this category.</li>
+{% endfor %}
+</ul>

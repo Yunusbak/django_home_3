@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category.info }} Animals</title>
+</head>
+<body>
+    <h1>{{ category.info }} Animals:</h1>
+    <ul>
+    {% for animal in animals %}
+        <li> 
+            <img src="{{ animal.image.url }}"/><br>
+            name: {{ animal.name }} <br>
+             Weight: {{ animal.weight }}<br>
+             Age: {{ animal.age }}<br>
+            
+        </li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'category_list' %}">Back</a>
+</body>
+</html>
